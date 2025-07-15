@@ -1,0 +1,130 @@
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #121212;
+    color: #ffffff;
+    padding: 16px 20px;
+    margin: 12px 0;
+    border-radius: 12px;
+    border: 1px solid #ffffff33;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.07);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-item:hover {
+    background-color: #1e1e1e;
+    box-shadow: 0 0 12px #ffffff55;
+}
+
+.task-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #00ffcc;
+}
+
+.task-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    transition: opacity 0.3s ease;
+}
+
+.task-title.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.task-description {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.4;
+    margin-left: 30px;
+    padding-right: 10px;
+}
+
+.task-meta {
+    font-size: 13px;
+    color: #ccc;
+    display: flex;
+    gap: 16px;
+    margin-left: 30px;
+}
+
+.task-date,
+.task-priority {
+    opacity: 0.8;
+}
+
+.delete-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: #ff4d4d;
+    font-size: 22px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    transform: scale(1.1);
+    color: #fff;
+    background-color: #ff1a1a;
+    box-shadow: 0 0 10px #ff4d4d88;
+    border: 1px solid #fff;
+}
+@media screen and (max-width: 480px) {
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 16px;
+        gap: 10px;
+    }
+
+    .task-left {
+        width: 100%;
+        gap: 6px;
+    }
+
+    .checkbox-label {
+        gap: 10px;
+    }
+
+    .task-title {
+        font-size: 16px;
+    }
+
+    .task-description {
+        font-size: 13px;
+        margin-left: 20px;
+        padding-right: 0;
+    }
+
+    .task-meta {
+        font-size: 12px;
+        margin-left: 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .delete-btn {
+        align-self: flex-end;
+        font-size: 20px;
+        padding: 4px 8px;
+    }
+}
